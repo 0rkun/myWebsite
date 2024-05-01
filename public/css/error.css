@@ -1,0 +1,20 @@
+.error{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.error span{
+    font-size: 5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 1;
+    font-weight: 900;
+}
+.error i{
+    position: absolute;
+    font-size: 20em;
+    opacity: 0.2;
+    color: red;
+}

@@ -1,0 +1,75 @@
+.about{
+    padding: 0px 20px;
+}
+.about .wrapper{
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1366px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+}
+.about .wrapper:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.about .wrapper .text{
+    flex: 1;
+    padding: 10px;
+}
+.about .wrapper .text  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+.about .wrapper .text  p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    font-size: 1.2em;
+    line-height: 25px;
+}
+.about .wrapper .text p::first-letter{
+    margin-left: 20px;
+}
+.about .wrapper .photo{
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.about .wrapper .photo img{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.about .wrapper .photo img:hover{
+    transform: scale(1.1);
+    
+}
+/* scroll */
+.about .wrapper{
+    opacity: 0;
+    transition: all 0.5s;
+}
+.about .wrapper.active{
+    opacity: 1;
+}
+.about .wrapper .text{
+    transform: translateX(-20px);
+    transition: all 0.5s;
+}
+.about .wrapper:nth-child(2n) .text{
+    transform: translateX(20px);
+}
+.about .wrapper.active .text{
+    transform: translateX(0px);
+}
+
+.about .wrapper .photo{
+    transform: translateX(20px);
+    transition: all 0.5s;
+}
+.about .wrapper:nth-child(2n) .photo{
+    transform: translateX(-20px);
+}
+.about .wrapper.active .photo{
+    transform: translateX(0px);
+}

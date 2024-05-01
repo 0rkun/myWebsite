@@ -1,0 +1,75 @@
+.logReg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logReg img{
+    width: 100%;
+    height: calc(100vh - 50px); /*100vh görünen her yeri kapla demek ama topbar 50 px o yüzden çıkarıyorum*/
+}
+.logReg form{
+    width: 350px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5),0px 0px 10px rgba(0, 0, 0, 0.5),0px 0px 15px rgba(0, 0, 0, 0.5);
+}   
+.logReg form .formGroup{
+    margin-bottom: 30px;
+    position: relative;
+}  
+.logReg form .formGroup input{
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 7px 0px 0px 10px;
+}  
+.logReg form .formGroup span{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 4px 5px;
+  transition: all 0.3s;
+}
+.logReg form .formGroup input:focus ~ span, 
+.logReg form .formGroup input:valid ~ span{ /* sonra gelen elemanı seç ~*/
+    top: -10px;
+    left: 20px;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+.logReg form .btnGroup{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logReg form .btnGroup a{
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    transition: all 0.5s;
+    border-bottom: 2px solid transparent;
+}
+
+.logReg form .btnGroup a:hover{
+    border-bottom: 1px solid #fff;
+}
+.logReg form .btnGroup button{
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(96, 94, 94, 0.3);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1em;
+}

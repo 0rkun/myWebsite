@@ -1,0 +1,69 @@
+.posts{
+    flex: 9;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.posts .post{
+    width: calc(50% - 20px); /* 18.14 #5*/
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.posts h1{
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.posts img {
+    padding: 5px;
+    border-radius: 15px;
+    height: 300px;
+    object-fit: cover;
+}
+.posts img {
+    padding: 5px;
+    border-radius: 15px;
+}
+.posts p{
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+}
+.posts .authorAndDate{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+
+/* scroll  */
+
+.posts .post{
+    transform: translateX(-20px);
+    opacity: 0;
+}
+.posts .post:nth-child(2n){
+    transition: all 0.6s;
+}
+.posts .post.active{
+    transform: translateX( 0px);
+    transition: all 0.5s;
+    opacity: 1;
+}
+/* responsive */
+@media(max-width:1100px){ /*responsive sayfa küçüldügünde 100% yapıyor*/
+    .posts .post{
+        width: 100%;    
+    }
+    .posts .post:nth-child(2n){
+        transition: all 0.5s;
+    }
+}

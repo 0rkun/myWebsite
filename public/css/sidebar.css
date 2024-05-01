@@ -1,0 +1,64 @@
+.sidebar{
+    flex: 3;    
+    padding: 0 20px;
+}
+.sidebar .area{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.sidebar h3{
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.sidebar h3::after{
+    content: " ";
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -6px;
+}
+.sidebar img{
+    padding: 13px;
+    border-radius: 17px;
+}
+.sidebar .categories {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.sidebar .categories span{
+    display: block;
+    width: calc(50% - 10px);
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.sidebar a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    padding: 3px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* scroll */
+
+.sidebar .area{
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.sidebar .area.active{
+    transform:translateX(0px);
+    transition: all 0.5s;
+    opacity: 1;
+}
